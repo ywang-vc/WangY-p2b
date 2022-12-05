@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,700;1,700&display=swap");
+#achievements .prize, #achievements h1, #headerbar, #footerbar, body {
+  padding: 0;
+  margin: 0;
+}
+
+#audit .container .content .btns, #audit .container .content .font ul, #footerbar footer, .container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#audit .container .content .scheme .color ul, #audit .container .content .flex, .boxes, .item, #footerbar footer .links ul, #footerbar footer .links .logoname, #footerbar footer .links, #achievements .prize, #headerbar header nav ul, #headerbar header {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.boxes .card, .button {
+  box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.7), 4px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #656565;
+  font: 400 1em/200% "Montserrat", "Poppins", sans-serif;
+  background: #ECECEC;
+}
+
+#headerbar, #footerbar {
+  background: linear-gradient(110deg, #5B47D5 3.23%, #479FDB 95.43%);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4em;
+  line-height: 200%;
+  color: #17058A;
+}
+
+#audit .container .content .font ul li, h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 200%;
+  font-style: italic;
+  color: #5B47D4;
+}
+
+#audit .container .content .scheme .color ul li, #footerbar footer .links ul li a, #headerbar header nav ul li a, p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 200%;
+  color: #656565;
+}
+
+span {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  width: 20em;
+  padding: 0.5em;
+  margin: 1em 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.25em;
+  line-height: 180%;
+  text-align: center;
+  color: #17058A;
+  background-color: #ECECEC;
+}
+.button:hover {
+  background: #17058A;
+  color: #fff;
+}
+.button:active {
+  background-color: #ECECEC;
+  box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.7), inset 4px 4px 4px rgba(0, 0, 0, 0.2);
+  color: #656565;
+}
+
+li {
+  list-style: none;
+}
+
+/* homepage */
+#headerbar header {
+  justify-content: space-between;
+  align-items: center;
+}
+#headerbar header .logo {
+  margin: 1em 0;
+}
+#headerbar header nav ul {
+  justify-content: space-between;
+}
+#headerbar header nav ul li {
+  padding: 1em;
+}
+#headerbar header nav ul li a {
+  color: #fff;
+}
+#headerbar header nav ul li a:hover {
+  font-style: italic;
+  font-weight: 700;
+  border-bottom: solid 0.2em #fff;
+}
+
+#hero {
+  background: url(/images/herobg.png) right bottom no-repeat;
+  background-size: contain;
+}
+#hero p {
+  width: 50%;
+}
+
+#achievements {
+  margin: 5rem 0;
+}
+#achievements h1 {
+  text-align: center;
+}
+#achievements img.top {
+  width: 100%;
+}
+#achievements .prize {
+  justify-content: space-around;
+}
+#achievements .prize img {
+  width: 48%;
+}
+
+#footerbar footer {
+  justify-content: center;
+  align-items: center;
+  margin: 5em auto;
+  padding: 0;
+}
+#footerbar footer .links {
+  justify-content: space-between;
+  align-items: center;
+}
+#footerbar footer .links .logoname {
+  align-items: center;
+}
+#footerbar footer .links .logoname img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#footerbar footer .links .logoname h2 {
+  color: #fff;
+  margin: 0 1em;
+}
+#footerbar footer .links ul {
+  justify-content: space-around;
+  align-items: center;
+}
+#footerbar footer .links ul li {
+  padding: 0 2.5em;
+}
+#footerbar footer .links ul li a {
+  color: #fff;
+}
+#footerbar footer p {
+  color: #fff;
+  text-align: center;
+}
+
+/* report page */
+#partiii {
+  background: url(/images/reportimg1.png) no-repeat bottom left;
+  background-size: contain;
+}
+
+#partiv {
+  background: url(/images/reportimg2.png) no-repeat bottom left;
+  background-size: contain;
+}
+
+.item {
+  justify-content: space-between;
+}
+.item h2 {
+  width: 35%;
+}
+.item p {
+  width: 60%;
+}
+
+.boxes {
+  justify-content: space-between;
+  width: 100%;
+  margin: 3em auto;
+}
+.boxes .card {
+  width: 30%;
+  background: rgba(236, 236, 236, 0.7);
+  padding: 2.5em;
+}
+.boxes .card h2 {
+  color: #000;
+  text-align: center;
+}
+
+/* design system */
+#audit .container {
+  background: url(/images/iPhoneX.png) no-repeat top right;
+  background-size: 60% auto;
+}
+#audit .container .content {
+  margin: 3em 0;
+}
+#audit .container .content h1:first-child {
+  text-transform: uppercase;
+}
+#audit .container .content h1:first-child span {
+  text-transform: capitalize;
+  color: #656565;
+}
+#audit .container .content hr {
+  background: #17058A;
+  height: 1em;
+  width: 10em;
+  float: left;
+}
+#audit .container .content p.text {
+  width: 50%;
+}
+#audit .container .content .flex {
+  justify-content: space-between;
+}
+#audit .container .content .logo-item {
+  text-align: center;
+  margin: 0 1em;
+}
+#audit .container .content .scheme {
+  justify-content: space-between;
+}
+#audit .container .content .scheme .color ul.white {
+  background-color: #fff;
+  padding: 1em 5.5em;
+}
+#audit .container .content .scheme .color ul.white li {
+  color: #656565;
+}
+#audit .container .content .scheme .color ul.linear {
+  background: linear-gradient(110deg, #5B47D5 3.23%, #479FDB 95.43%);
+  padding: 1em 5.5em;
+}
+#audit .container .content .scheme .color ul li {
+  padding: 0.5em 2em;
+  color: #fff;
+}
+#audit .container .content .scheme .color ul li.gray {
+  background-color: #ECECEC;
+}
+#audit .container .content .scheme .color ul li.purple {
+  background-color: #5B47D4;
+}
+#audit .container .content .scheme .color ul li.darkpurple {
+  background-color: #17058A;
+}
+#audit .container .content .scheme .color ul li.darkgray {
+  background-color: #656565;
+}
+#audit .container .content .font {
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 1em;
+  padding: 3em 0;
+}
+#audit .container .content .font ul {
+  justify-content: space-around;
+}
+#audit .container .content .font ul li {
+  padding: 0.5em 0;
+}
+#audit .container .content .font ul li.heading {
+  font: 700 3.75em/120% "Poppins", sans-serif;
+  color: #000;
+}
+#audit .container .content .font ul li.subhead {
+  font: 700 3em/120% "Poppins", sans-serif;
+  color: #000;
+  font-style: italic;
+}
+#audit .container .content .font ul li.body {
+  font: 400 2em/180% "Montserrat", sans-serif;
+  color: #000;
+}
+#audit .container .content .images img {
+  width: 48%;
+}
+#audit .container .content .btns img {
+  margin: 1em auto;
+}
+
+/*------- media queries -------*/
+@media screen and (max-device-width: 640px) {
+  h1 {
+    text-align: center;
+    font-size: 3.6em;
+  }
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 200%;
+    font-style: italic;
+    color: #5B47D4;
+  }
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 200%;
+  }
+  .button {
+    margin: 2em auto;
+  }
+  header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center !important;
+  }
+  header .logo {
+    margin: 2em auto 0 !important;
+  }
+  footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+  footer .links .logoname {
+    margin: 1em auto;
+    display: flex;
+    flex-flow: column nowrap !important;
+    justify-content: center;
+  }
+  footer .links ul {
+    display: flex;
+    flex-flow: column wrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  footer .links ul li {
+    font-size: 1em;
+  }
+  footer p {
+    width: 100%;
+    text-align: right;
+  }
+  /* homepage */
+  #hero {
+    background: none;
+  }
+  #hero p {
+    width: 100%;
+  }
+  #achievements .prize img {
+    width: 100%;
+  }
+  /* report page */
+  #partiii, #partiv {
+    background: none;
+  }
+  .item {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .item h2, .item p {
+    width: 100%;
+  }
+  .boxes {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .boxes .card {
+    width: 100%;
+    margin: 2em auto;
+  }
+  /* design system */
+  #audit .container {
+    background: none;
+  }
+  #audit .container .content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  #audit .container .content p.text {
+    width: 100%;
+  }
+  #audit .container .content .flex {
+    flex-direction: column;
+  }
+  #audit .container .content .card {
+    margin: 1em 0;
+  }
+}/*# sourceMappingURL=main.css.map */

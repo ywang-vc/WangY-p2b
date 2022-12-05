@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,700;1,700&display=swap');
+
+%zero{
+    padding: 0;
+    margin: 0;
+}
+
+%column{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+%row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+%shadow{
+    box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.7), 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: .5em;
+}
+
+$white: #fff;
+$bggray: #ECECEC;
+$linear: linear-gradient(110deg, #5B47D5 3.23%, #479FDB 95.43%);
+$darkpurple: #17058A;
+$purple: #5B47D4;
+$darkgray: #656565;
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+*, *:before, *:after {
+	box-sizing:inherit;
+}
+
+body {
+	color: $darkgray;
+    font: 400 1em/200% 'Montserrat','Poppins', sans-serif;
+	background: $bggray;
+    @extend %zero;
+}
+
+#headerbar, #footerbar{
+	@extend %zero;
+    background: $linear;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 85%;
+    @extend %column;
+}
+
+h1{
+    font-family:'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 200%;
+    color: $darkpurple;
+}
+
+h2{
+    @extend %h2;
+}
+
+%h2{
+    font-family:'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 200%;
+    font-style: italic;
+    color: $purple;
+}
+
+p{
+    @extend %p;
+}
+
+%p{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 200%;
+    color: $darkgray;
+}
+
+
+span{
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+}
+
+.button{
+    width: 20em;
+    padding: .5em;
+    margin: 1em 0;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.25em;
+    line-height: 180%;
+    text-align: center;
+    color: $darkpurple;
+    background-color: $bggray;
+    @extend %shadow;
+
+    &:hover{
+        background: $darkpurple;
+        color: $white;
+    }
+
+    &:active{
+        background-color: $bggray;
+        box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.7), inset 4px 4px 4px rgba(0, 0, 0, 0.2);
+        color:$darkgray;
+    }
+}
+
+li{
+    list-style: none;
+}
+
+/* homepage */
+
+#headerbar{
+
+    header{
+        @extend %row;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            margin: 1em 0;
+        }
+
+        nav{
+            ul{
+                @extend %row;
+                justify-content: space-between;
+            
+                li{
+                    padding: 1em;
+    
+                    a{
+                        color: $white;
+                        @extend %p;
+    
+                        &:hover{
+                            font-style: italic;
+                            font-weight: 700;
+                            border-bottom: solid .2em $white;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+#hero{
+    background: url(/images/herobg.png) right bottom no-repeat;
+    background-size: contain;
+
+    p{
+        width: 50%;
+    }
+}
+
+#achievements{
+    margin: 5rem 0;
+
+    h1{
+        text-align: center;
+        @extend %zero;
+    }
+
+    img.top{
+        width: 100%;
+    }
+
+    .prize{
+        @extend %zero;
+        @extend %row;
+        justify-content: space-around;
+
+        img{
+            width: 48%;
+        }
+    }
+
+}
+
+#footerbar{
+
+    footer{
+        @extend %column;
+        justify-content: center;
+        align-items:center;
+        margin: 5em auto;
+        padding: 0;
+
+        .links{
+            @extend %row;
+            justify-content: space-between;
+            align-items: center;
+
+            .logoname{
+                @extend %row;
+                align-items: center;
+    
+                img{
+                    height: fit-content;
+                }
+    
+                h2{
+                    color: $white;
+                    margin:0 1em;
+                }
+            }
+
+            ul{
+                @extend %row;
+                justify-content: space-around;
+                align-items: center;
+    
+                li{
+                    padding: 0 2.5em;
+    
+                    a{
+                        color: $white;
+                        @extend %p;
+                    }   
+                }
+            }
+        }
+
+        p{
+            color: $white;
+            text-align: center;
+        }
+    }
+}
+
+
+/* report page */
+
+#partiii{
+    background: url(/images/reportimg1.png) no-repeat bottom left;
+    background-size: contain;
+}
+
+#partiv{
+    background: url(/images/reportimg2.png) no-repeat bottom left;
+    background-size: contain;
+}
+
+.item{
+    @extend %row;
+    justify-content: space-between;
+
+    h2{
+        width: 35%;
+    }
+
+    p{
+        width: 60%;
+    }
+}
+
+.boxes{
+    @extend %row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 3em auto;
+
+    .card{
+        width:30%;
+        @extend %shadow;
+        background: rgba(236, 236, 236, 0.7);
+        padding: 2.5em;
+
+        h2{
+            color: #000;
+            text-align: center;
+        }
+    }
+}
+
+/* design system */
+
+#audit{
+
+    .container{
+        background: url(/images/iPhoneX.png) no-repeat top right;
+        background-size: 60% auto;
+
+        .content{
+            margin: 3em 0;
+
+            h1:first-child{
+                text-transform: uppercase;
+
+                span{
+                    text-transform: capitalize;
+                    color: $darkgray;
+                }
+            }
+
+            hr{
+                background: $darkpurple;
+                height: 1em;
+                width: 10em;
+                float: left;
+            }
+
+            p.text{
+                width: 50%;
+            }
+
+            .flex{
+                @extend %row;
+                justify-content: space-between;
+            }
+
+            .logo-item{
+                text-align: center;
+                margin: 0 1em;
+            }
+
+            .scheme{
+                justify-content: space-between;
+
+                .color{
+                    ul{
+                        @extend %row;
+
+                        &.white{
+                            background-color: $white;
+                            padding: 1em 5.5em;
+                            
+                            li{
+                                color: $darkgray;
+                            }
+                        }
+
+                        &.linear{
+                            background: $linear;
+                            padding: 1em 5.5em;
+                        }
+
+                        li{
+                            padding: .5em 2em;
+                            @extend %p;
+                            color: $white;
+
+                            &.gray{
+                                background-color: $bggray;
+                            }
+
+                            &.purple{
+                                background-color: $purple;
+                            }
+
+                            &.darkpurple{
+                                background-color: $darkpurple;
+                            }
+
+                            &.darkgray{
+                                background-color: $darkgray;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .font{
+                justify-content: space-around;
+                background-color: $white;
+                border-radius: 1em;
+                padding: 3em 0;
+
+                ul{
+                    @extend %column;
+                    justify-content: space-around;
+
+                    li{
+                        @extend %h2;
+                        padding: .5em 0;
+
+                        &.heading{
+                            font: 700 3.75em/120% 'Poppins', sans-serif;
+                            color: #000;
+                        }
+
+                        &.subhead{
+                            font: 700 3em/120% 'Poppins', sans-serif;
+                            color: #000;
+                            font-style: italic;
+                        }
+
+                        &.body{
+                            font: 400 2em/180% 'Montserrat', sans-serif;
+                            color: #000;
+
+                        }
+                    }
+                }
+            }
+
+            .images{
+                img{
+                    width: 48%;
+                }
+            }
+
+            .btns{
+                @extend %column;
+
+                img{
+                    margin: 1em auto;
+                }
+            }
+        }
+    }  
+}
+
+
+/*------- media queries -------*/
+@media screen and (max-device-width: 640px){
+    h1{
+        text-align: center;
+        font-size: 3.6em;
+    }
+
+    h2{
+        font-family:'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        line-height: 200%;
+        font-style: italic;
+        color: $purple;
+    }
+
+    p{
+        font-family:'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 2em;
+        line-height: 200%;
+    }
+
+    .button{
+        margin: 2em auto;
+    }
+
+    header{  
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center !important;    
+
+        .logo{
+            margin:2em auto 0 !important;
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+
+        .links{
+            .logoname{
+                margin: 1em auto;
+                display: flex;
+                flex-flow: column nowrap !important;
+                justify-content: center;
+            }
+
+            ul{
+                display: flex;
+                flex-flow: column wrap !important;
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
+
+                li{
+                    font-size: 1em; 
+                }
+            }
+        }
+
+        p{
+            width: 100%;
+            text-align: right;
+        }
+    }
+
+    
+
+    /* homepage */
+    #hero{
+        background: none;
+
+        p{
+            width: 100%;
+        }
+    }
+
+    #achievements{
+        .prize{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+    /* report page */
+    #partiii, #partiv{
+        background: none;
+    }
+
+    .item{
+        display: flex;
+        flex-flow: column nowrap;
+
+        h2, p{
+            width: 100%;
+        }
+    }
+
+    .boxes{
+        display: flex;
+        flex-flow: column nowrap;
+
+        .card{
+            width: 100%;
+            margin: 2em auto;
+        }
+    }
+
+    /* design system */
+    #audit{
+        .container{
+            background: none;
+
+            .content{
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+
+                p.text{
+                    width: 100%;
+                }
+    
+                .flex{
+                    flex-direction: column;
+                }
+
+                .card{
+                    margin: 1em 0;
+                }
+            }
+
+            
+        }
+    }
+
+}
