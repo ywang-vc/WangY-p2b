@@ -98,6 +98,7 @@ a{
 
 .button{
     width: 20em;
+    height: fit-content;
     padding: .5em;
     margin: 1em 0;
     font-family:'Montserrat', sans-serif;
@@ -163,7 +164,7 @@ li{
 }
 
 #hero{
-    background: url(/images/herobg.png) right bottom no-repeat;
+    background: url(../images/herobg.png) right bottom no-repeat;
     background-size: contain;
 
     p{
@@ -250,17 +251,18 @@ li{
 /* report page */
 
 #partiii{
-    background: url(/images/reportimg1.png) no-repeat bottom left;
+    background: url(../images/reportimg1.png) no-repeat top left;
     background-size: contain;
 }
 
 #partiv{
-    background: url(/images/reportimg2.png) no-repeat bottom left;
+    background: url(../images/reportimg2.png) no-repeat bottom left;
     background-size: contain;
 }
 
 .item{
     @extend %row;
+    padding: 0;
     justify-content: space-between;
 
     h2{
@@ -296,8 +298,8 @@ li{
 #audit{
 
     .container{
-        background: url(/images/iPhoneX.png) no-repeat top right;
-        background-size: 60% auto;
+        background: url(../images/iPhoneX.png) no-repeat top right;
+        background-size: 50% auto;
 
         .content{
             margin: 3em 0;
@@ -431,7 +433,7 @@ li{
 
 
 /*------- media queries -------*/
-@media screen and (max-device-width: 640px){
+@media screen and (max-device-width: 960px){
     h1{
         text-align: center;
         font-size: 3.6em;
@@ -502,7 +504,7 @@ li{
 
     /* homepage */
     #hero{
-        background: none;
+        background:#ECECEC;
 
         p{
             width: 100%;
@@ -519,7 +521,7 @@ li{
     
     /* report page */
     #partiii, #partiv{
-        background: none;
+        background: #ECECEC;
     }
 
     .item{
@@ -544,7 +546,7 @@ li{
     /* design system */
     #audit{
         .container{
-            background: none;
+            background: #ECECEC;
 
             .content{
                 display: flex;
